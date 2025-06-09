@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David - Web Creator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 id="typing-text">Salut, sunt David 👋</h1>
+      <p >Web Developer • Creator • Vânzător de resurse digitale</p>
+      <nav>
+        <ul>
+          <li><a href="#despre">Despre</a></li>
+          <li><a href="#portofoliu">Portofoliu</a></li>
+          <li><a href="#shop">Magazin</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="despre" class="container">
+  <h2>Despre mine</h2>
+  <p class="intro">
+    Sunt David, pasionat de web design și dezvoltare web. Creez site-uri moderne, rapide și frumoase, dar și resurse digitale de calitate.
+  </p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-icon">💡</div>
+      <div class="timeline-content">
+        <h3>2023 - Primul site</h3>
+        <p>Am creat primul meu site în HTML și CSS. A fost începutul aventurii!</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon">🚀</div>
+      <div class="timeline-content">
+        <h3>2024 - Portofoliu & Proiecte</h3>
+        <p>Am lansat portofoliul meu online și am început să lucrez pentru clienți reali.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon">🛍️</div>
+      <div class="timeline-content">
+        <h3>2025 - Magazin Digital</h3>
+        <p>Am început să vând resurse digitale: template-uri, cursuri și tool-uri pentru dezvoltatori.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portofoliu" class="container">
+  <h2>Portofoliu</h2>
+  
+  <div class="filter-buttons">
+    <button data-filter="all" class="active">Toate</button>
+    <button data-filter="web">Web</button>
+    <button data-filter="design">Design</button>
+    <button data-filter="shop">Shop</button>
+  </div>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-item" data-category="web">
+      <img src="images/website1.jpg" alt="Site 1" />
+      <div class="overlay">
+        <h3>Site de Prezentare</h3>
+        <p>HTML / CSS / JS</p>
+      </div>
+    </div>
+
+    <div class="portfolio-item" data-category="design">
+      <img src="images/design.jpg" alt="Design 1" />
+      <div class="overlay">
+        <h3>UI Design</h3>
+        <p>Figma / Sketch</p>
+      </div>
+    </div>
+
+    <div class="portfolio-item" data-category="shop">
+      <img src="images/shop1.jpg" alt="Shop 1" />
+      <div class="overlay">
+        <h3>Magazin Online</h3>
+        <p>HTML / JS / Cart</p>
+      </div>
+    </div>
+
+    <!-- Poți adăuga mai multe... -->
+  </div>
+</section>
+
+<section id="shop" class="container">
+  <h2>Magazin Digital</h2>
+  <div class="shop-grid">
+    <div class="product-card">
+      <img src="images/product-1.jpg" alt="Produs 1">
+      <h3>Template Portfolio</h3>
+      <p class="price">290 RON</p>
+      <button class="add-to-cart" data-name="Template Portfolio" data-price="29">Adaugă în coș</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/product-3.jpg" alt="Produs 2">
+      <h3>CV Interactiv</h3>
+      <p class="price">190 RON</p>
+      <button class="add-to-cart" data-name="CV Interactiv" data-price="19">Adaugă în coș</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/product-2.jpg" alt="Produs 3">
+      <h3>Starter Kit HTML</h3>
+      <p class="price">95 RON</p>
+      <button class="add-to-cart" data-name="Starter Kit HTML" data-price="9">Adaugă în coș</button>
+    </div>
+  </div>
+
+  <div class="cart-box">
+    <h3>🛒 Coșul tău</h3>
+    <ul id="cart-list"></ul>
+    <p>Total: <span id="cart-total">0</span> RON</p>
+  </div>
+</section>
+
+<section id="testimoniale" class="container">
+  <h2>Păreri de la clienți</h2>
+  <div class="testimonial-slider">
+    <div class="testimonial active">
+      <p>"Super profesionist! Mi-a făcut site-ul exact cum voiam."</p>
+      <h4>Andrei Popescu</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Rapid, creativ și atent la detalii. Recomand cu încredere."</p>
+      <h4>Ioana Marin</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Un om serios, m-a ajutat cu portofoliul și m-a făcut să ies în evidență."</p>
+      <h4>Alex Ionescu</h4>
+    </div>
+  </div>
+  <div class="testimonial-nav">
+    <button id="prevTestimonial">←</button>
+    <button id="nextTestimonial">→</button>
+  </div>
+</section>
+
+
+    <section id="contact" class="container">
+  <h2>Contactează-mă</h2>
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="Numele tău" required>
+    <input type="email" name="email" placeholder="Emailul tău" required>
+    <textarea name="message" placeholder="Mesajul tău..." required></textarea>
+    <button type="submit">Trimite</button>
+    <p id="contact-message" class="success-msg"></p>
+  </form>
+</section>
+
+  </main>
+
+  <footer id="footer" class="container">
+  <div class="footer-content">
+    <div class="footer-info">
+      <h3>David Rusu</h3>
+      <p>Web developer & designer</p>
+      <p>Email: daviderusu17@yahoo.com</p>
+      <p>Telefon: +39 3478593182</p>
+    </div>
+    <div class="footer-social">
+      <h4>Urmărește-mă</h4>
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+        <img src="assets/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <img src="assets/instagram.svg" alt="Instagram" />
+      </a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+        <img src="assets/linkedin.svg" alt="LinkedIn" />
+      </a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+        <img src="assets/twitter.svg" alt="Twitter" />
+      </a>
+    </div>
+    <div class="footer-map">
+      <h4>Locația mea</h4>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.1234567890!2d26.102465315676784!3d44.42676797909906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff9d1d4d3b35%3A0x7d61b8e9d7e1c5b0!2sBucurești!5e0!3m2!1sro!2sro!4v1686139123456!5m2!1sro!2sro"
+        width="280"
+        height="180"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+  <p class="footer-copy">© 2025 David Rusu. Toate drepturile rezervate.</p>
+</footer>
+
+
+  <script src="script.js"></script>
+  <button id="backToTop" title="Înapoi sus">&#8679;</button>
+
+</body>
+</html>
